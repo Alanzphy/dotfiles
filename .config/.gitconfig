@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+[user]
+	email = alanzphy@gmail.com
+	name = AlanRuiz
+[init]
+	defaultBranch = main
+[alias]
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset)%C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	s = status --short --branch
+[pull]
+	rebase = true
+[core]
+	editor = nvim
