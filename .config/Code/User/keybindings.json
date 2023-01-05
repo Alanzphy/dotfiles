@@ -26,6 +26,6 @@
   {
     "key": "a",
     "command": "explorer.newFile",
-    "when": "explorerViewletVisible && filesExplorerFocus !explorerResourcesReadonly &&!inputFocus"
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly &&!inputFocus"
   }
 ]
