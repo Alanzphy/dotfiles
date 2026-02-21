@@ -1,6 +1,7 @@
 [user]
 	email = alanzphy@gmail.com
 	name = Alan Ruiz
+	signingkey = /home/alanz/.ssh/ssh-github.pub
 [init]
 	defaultBranch = main
 
@@ -25,9 +26,21 @@
 	helper = cache
 [rebase]
 	autoStash = true
-#[url "ssh://git@github.com/"]
-#	insteadOf = https://github.com/
 [gpg]
-	format = ssh
+  format = ssh
+[commit]
+  gpgSign = true
 [help]
 	autocorrect = prompt
+[credential]
+{{- if eq .chezmoi.os "linux" }}
+	helper = cache
+{{- else if eq .chezmoi.os "darwin" }}
+	helper = osxkeychain
+{{- end }}
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
