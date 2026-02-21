@@ -204,3 +204,24 @@ set -g @continuum-save-interval '5'
 
 
 run '~/.tmux/plugins/tpm/tpm'
+
+# ==========================================
+# REMOTE MODE (To nested ssh sessions)
+# ==========================================
+# Press F12 to disable tmux local shortcuts
+# Press again to enable
+
+bind -T root F12  \
+  set prefix None \;\
+  set key-table off \;\
+  set status off \;\
+  if -F '#{pane_in_mode}' 'send-keys -X cancel' \;\
+  refresh-client -S \;\
+  display-message "Remote Mode Enable"
+
+bind -T off F12 \
+  set -u prefix \;\
+  set -u key-table \;\
+  set status on \;\
+  refresh-client -S \;\
+  display-message "Remote Mode Disable"
