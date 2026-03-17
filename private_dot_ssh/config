@@ -1,5 +1,0 @@
-Host vps_v4cores
-  HostName 51.222.87.178
-  User alanrz
-  IdentityFile ~/.ssh/vps_v4cores
-  Port 2222
