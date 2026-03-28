@@ -149,8 +149,8 @@ alias ez="$EDITOR ~/.zshrc"
 
 # Brew
 alias b="brew"
-alias update='brew update && brew upgrade && brew cleanup'
-alias bup='brew update && brew upgrade'
+alias update='brew update; brew upgrade; brew cu -a;  brew cleanup'
+alias bup='brew update; brew upgrade'
 alias bcask='brew cu -a'
 alias bprune='brew cleanup --prune=all'
 
