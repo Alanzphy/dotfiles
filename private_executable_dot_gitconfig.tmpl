@@ -1,7 +1,7 @@
 [user]
 	email = alanzphy@gmail.com
 	name = Alan Ruiz
-	signingkey = ~/.ssh/ssh-github.pub
+	signingkey = ~/.ssh/github-signingkey.pub
 [init]
 	defaultBranch = main
 
@@ -35,10 +35,14 @@
 [credential]
 {{- if eq .chezmoi.os "linux" }}
 	helper = cache
-{{- else if eq .chezmoi.os "darwin" }}
-	helper = osxkeychain
-{{- end }}
 [credential "https://github.com"]
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
+{{- else if eq .chezmoi.os "darwin" }}
+	helper = osxkeychain
+[credential "https://github.com"]
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/opt/homebrew/bin/gh auth git-credential
+{{- end }}
