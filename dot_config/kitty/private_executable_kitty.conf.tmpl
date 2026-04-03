@@ -1,0 +1,189 @@
+#Version 3.0.2
+#font_family      JetBrainsMono Nerd Font Bold
+#bold_font        JetBrainsMono Nerd Font Bold
+#italic_font      JetBrainsMono Nerd Font Italic
+#bold_italic_font JetBrainsMono Nerd Font BoldItalic
+font_family      JetBrains Mono Bold
+bold_font        JetBrains Mono Bold
+italic_font      JetBrains Mono Bold Italic
+bold_italic_font JetBrains Mono Bold Italic
+
+#font_family      LigaSFMonoNerdFont-SemiBold
+#bold_font        LigaSFMonoNerdFont-SemiBold
+#italic_font      LigaSFMonoNerdFont-Italic
+#bold_italic_font LigaSFMonoNerdFont-SemiBoldItalic
+
+
+cursor_trail 10
+cursor_trail_decay 0.1 0.4
+cursor_trail_start_threshold 0
+force_ltr no
+font_size 15.5
+#window_border_width 0.5pt
+open_url_with default
+url_prefixes file ftp ftps gemini git gopher http https irc ircs kitty mailto news sftp ssh
+detect_urls yes
+copy_on_select no
+strip_trailing_spaces never
+select_by_word_characters @-./_~?&=%+#
+sync_to_monitor yes
+enable_audio_bell no
+hide_window_decorations titlebar-only
+background_opacity 0.85
+background_blur 10
+remember_window_size no
+{{- if eq .chezmoi.os "darwin" }}
+initial_window_width 93c
+initial_window_height 24c
+{{- else }}
+initial_window_width 130c
+initial_window_height 38c
+{{- end }}
+window_padding_width 5 12
+
+tab_bar_min_tabs            2
+tab_bar_edge                top
+tab_bar_style               fade
+tab_powerline_style         slanted
+tab_title_template          {title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}
+#modify_font cell_width 100%
+modify_font cell_height -5px
+
+
+# The basic colors
+#foreground              #b6a0ff
+foreground              #CDD6F4
+background              #1E1E2E
+selection_foreground    #1E1E2E
+selection_background    #F5E0DC
+
+# Cursor colors
+cursor                  #F5E0DC
+cursor_text_color       #1E1E2E
+
+# URL underline color when hovering with mouse
+url_color               #F5E0DC
+
+# Kitty window border colors
+active_border_color     #B4BEFE
+inactive_border_color   #6C7086
+bell_border_color       #F9E2AF
+
+# OS Window titlebar colors
+wayland_titlebar_color system
+macos_titlebar_color background
+
+# Tab bar colors
+active_tab_foreground   #11111B
+active_tab_background   #CBA6F7
+inactive_tab_foreground #CDD6F4
+inactive_tab_background #181825
+tab_bar_background      #11111B
+
+# Colors for marks (marked text in the terminal)
+mark1_foreground #1E1E2E
+mark1_background #B4BEFE
+mark2_foreground #1E1E2E
+mark2_background #CBA6F7
+mark3_foreground #1E1E2E
+mark3_background #74C7EC
+
+map ctrl+shift+z kitten zoom_toggle.py
+map ctrl+q close_window
+# The 16 terminal colors
+
+# Tokyo Night color scheme for kitty terminal emulator
+#foreground #b6a0ff
+#foreground  #a9b1d6
+background #1a1b26
+color0 #414868
+color8 #414868
+color1 #f7768e
+color9 #f7768e
+color2  #73daca
+color10 #73daca
+color3  #e0af68
+color11 #e0af68
+color4  #7aa2f7
+color12 #7aa2f7
+color5  #bb9af7
+color13 #bb9af7
+color6  #7dcfff
+color14 #7dcfff
+color7  #a9b1d6
+color15 #c0caf5
+cursor #c0caf5
+cursor_text_color #1a1b26
+selection_foreground none
+selection_background #28344a
+url_color #9ece6a
+active_border_color #3d59a1
+inactive_border_color #101014
+bell_border_color #e0af68
+modify_font cell_width 100%
+tab_bar_style fade
+tab_fade 1
+active_tab_foreground   #3d59a1
+active_tab_background   #16161e
+active_tab_font_style   bold
+inactive_tab_foreground #787c99
+inactive_tab_background #16161e
+inactive_tab_font_style bold
+tab_bar_background #101014
+
+#background #24283b
+#cursor_text_color #24283b
+#active_tab_background   #1f2335
+#inactive_tab_background #1f2335
+
+
+
+#color0 #45475A
+#color8 #585B70
+
+#color1 #F38BA8
+#color9 #F38BA8
+
+#color2  #A6E3A1
+#color10 #A6E3A1
+
+#color3  #F9E2AF
+#color11 #F9E2AF
+
+#color4  #89B4FA
+#color12 #89B4FA
+
+#color5  #F5C2E7
+#color13 #F5C2E7
+
+#color6  #94E2D5
+#color14 #94E2D5
+
+#color7  #BAC2DE
+#color7  #b6a0ff
+#color15 #A6ADC8
+
+
+
+
+#background            #1f1c27
+#foreground            #b6a0ff
+#cursor                #ff9738
+#selection_background  #353146
+#color0                #1f1c27
+#color8                #353146
+#color1                #d8393d
+#color9                #d8393d
+#color2                #2dcc72
+#color10               #2dcc72
+#color3                #d8b76e
+#color11               #d8b76e
+#color4                #ffc183
+#color12               #ffc183
+#color5                #dd8d40
+#color13               #dd8d40
+#color6                #2388ff
+#color14               #2388ff
+#color7                #b6a0ff
+#color15               #e9e4ff
+#selection_foreground #1f1c27

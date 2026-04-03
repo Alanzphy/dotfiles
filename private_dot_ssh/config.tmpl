@@ -1,0 +1,32 @@
+{{- if eq .chezmoi.os "darwin" }}
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# This won't be added again if you remove it.
+Include ~/.orbstack/ssh/config
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  ServerAliveInterval 60
+  ServerAliveCountMax 3
+
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+  IdentityFile ~/.ssh/signingkey
+{{- end }}
+
+Host vps_v4cores
+  HostName 51.222.87.178
+  User alanrz
+  IdentityFile ~/.ssh/vps_v4cores
+  Port 2222
+
+Host ssh.alanrz.bond
+{{- if eq .chezmoi.os "darwin" }}
+  ProxyCommand /opt/homebrew/bin/cloudflared access ssh --hostname %h
+{{- else }}
+  ProxyCommand /usr/bin/cloudflared access ssh --hostname %h
+{{- end }}
+  User alanrz
